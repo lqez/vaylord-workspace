@@ -1,0 +1,15 @@
+{
+  "name": "vaylord-render3d",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Headless three.js 3D renderer for vaylord-world-creator worlds (GPU-free verification screenshots).",
+  "type": "module",
+  "scripts": {
+    "render": "esbuild render3d.ts --bundle --platform=node --format=esm --external:gl --outfile=.render3d.mjs && xvfb-run -a -s \"-screen 0 1280x1024x24\" node .render3d.mjs"
+  },
+  "devDependencies": {
+    "esbuild": "^0.24.0",
+    "gl": "^8.1.0",
+    "three": "0.149.0"
+  }
+}

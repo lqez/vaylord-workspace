@@ -130,6 +130,31 @@ sees:
 Treat "screenshot captured, checked, and posted to the issue" as part of the
 definition of done for any visual change.
 
+### Capturing screenshots with no GPU/browser
+
+A browserless session can STILL render real three.js WebGL screenshots — no GPU
+required — so "the environment can't take screenshots" is not an acceptable excuse:
+
+- Use **`gl` (headless-gl)** for a software WebGL context, run under **`Xvfb`**
+  (`xvfb-run`), with **three pinned to r149** (headless-gl is WebGL1; three ≥ r163
+  needs WebGL2).
+- A ready-to-run renderer lives in **`tools/render3d/`** of this repo — it draws
+  the actual generated world (height mesh + biome colours + roads from
+  `world.roadField`). `cd tools/render3d && npm install && npm run render -- <seeds>`.
+- If `Xvfb` is missing, install it (`apt-get install -y xvfb`); if a download is
+  blocked, say so explicitly — don't silently skip the screenshot.
+
+### Embedding images inline in an issue (preview, not a link)
+
+The code repos are private, so their raw URLs won't render in the public
+workspace issues. Host the images in THIS public repo and embed them:
+
+1. Commit the PNGs under `verify/<issue-N>/` (or `verify/3d/`) and push.
+2. Reference them by **commit SHA** (not the branch — branch names contain `/`,
+   which makes `raw.githubusercontent.com` URLs ambiguous):
+   `![alt](https://raw.githubusercontent.com/lqez/vaylord-workspace/<full-sha>/verify/.../img.png)`
+3. GitHub then renders the image inline in the issue/PR.
+
 ## Reporting & etiquette
 
 - Be frugal with GitHub comments — post when there is genuinely something useful

@@ -18,6 +18,34 @@ An issue filed in `vaylord-workspace` almost always describes work that must be
 Decide which one from the issue's content (screenshots, terminology, file/feature
 references) before writing any code.
 
+## Continuous issue-monitoring loop (run this on every workspace session)
+
+When a session is opened on `lqez/vaylord-workspace`, **start a continuous
+issue-watching loop and keep it running** — a fresh session should re-establish
+this behaviour automatically, without being asked.
+
+How to run it:
+
+- **Heartbeat.** Arm a persistent background heartbeat that wakes you every
+  **3 minutes** (a `Monitor` running a `sleep 180` loop that prints one line per
+  tick). The harness may cap a monitor's lifetime (~30 min) and notify you that
+  it "timed out" — when that happens, **silently re-arm a new one** and continue.
+  Never use a foreground `sleep` to wait.
+- **On each tick**, list the open issues (and recent comments) and look for
+  anything new since you last acted: a new issue, or new feedback on an issue you
+  already worked. For each new/actionable item, run the standard workflow below
+  (decide the target repo → fix on the feature branch → build/verify → commit →
+  push → PR → Korean work-history comment with inline preview images).
+- **Stay silent when nothing changed.** If a tick finds no new issues and no new
+  feedback, do **not** message the user and do **not** comment on GitHub — just
+  re-arm/continue quietly. Only speak up when there is something actionable, a
+  question, or a blocker.
+- **Announce only at the end.** The loop runs for a long window (e.g. 96 hours).
+  Send the user a message **only when the loop finally ends** (window elapsed or
+  the user stops it) — tell them it's done. Re-arm silently in between.
+- **Stop** when the user asks you to (e.g. "stop the loop") — then `TaskStop` the
+  monitor and don't re-arm.
+
 ## The golden rule: ALWAYS fully-qualify cross-repo references
 
 A bare `#1` is **ambiguous** — the reader cannot tell which project's issue or PR

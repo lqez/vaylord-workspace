@@ -1,0 +1,32 @@
+kind,id,name_ko,name_en,condition_or_desc,source
+star,yul,율,Yul,"항성 — 베이 항성계의 태양",lqez/vaylord-world-creator src/viewer/yulSun.ts
+moon,arca,아르카,Arca,"제1의 달 — Arcane. 가장 오래됨·가장 멀고 작고 느림",lqez/vaylord-world-creator src/viewer/moons.ts
+moon,shatter,파쇄월,Shattered Moon,"제2의 달 — Bloodrain. 부서진 핏빛 달",lqez/vaylord-world-creator src/viewer/moons.ts
+moon,meshir,메시르,Meshir,"제3의 달 — Steammesh. 빠른 기계 위성(청록) · 12개월",lqez/vaylord-world-creator src/viewer/moons.ts
+moon,pale,여명월,Pale Moon,"제4의 달 — Ember. 가장 가깝고 크고 빠름(1개월) · 각성 사건의 달",lqez/vaylord-world-creator src/viewer/moons.ts
+planet,yeom,염,Yeom,"내행성 — 새벽/황혼에 붙는 밝은 점",lqez/vaylord-world-creator src/viewer/systemBodies.ts
+planet,sar,사르,Sar,"내행성 — 새벽/황혼에 붙는 밝은 점",lqez/vaylord-world-creator src/viewer/systemBodies.ts
+planet,merga,메르가,Merga,"외곽 거성 — 밤하늘 최상위 광도·7.6y 주기",lqez/vaylord-world-creator src/viewer/systemBodies.ts
+planet,sila,실라,Sila,"외곽 거성 — 붉은 대폭풍·28.4y 주기",lqez/vaylord-world-creator src/viewer/systemBodies.ts
+planet,roa,로아,Roa,"행성(밝은 여섯 중 하나)",lqez/vaylord-world-creator src/viewer/planetVisuals.ts
+planet,beil,베일,Beil,"행성(밝은 여섯 중 하나)",lqez/vaylord-world-creator src/viewer/planetVisuals.ts
+planet,haron,하론,Haron,"행성(밝은 여섯 중 하나)",lqez/vaylord-world-creator src/viewer/planetVisuals.ts
+planet,yun,윤,Yun,"행성(밝은 여섯 중 하나)",lqez/vaylord-world-creator docs/STATUS.md
+planet,od,오드,Od,"행성(별 무리에 섞이는 넷 중 하나)",lqez/vaylord-world-creator src/viewer/planetVisuals.ts
+planet,kal,칼,Kal,"행성(별 무리에 섞이는 넷 중 하나)",lqez/vaylord-world-creator docs/STATUS.md
+faction,arcane,아케인,Arcane,"세력 — 제1의 달 아르카와 조응",lqez/vaylord-world-creator src/core/regions.ts
+faction,bloodrain,블러드레인,Bloodrain,"세력 — 제2의 달 파쇄월과 조응",lqez/vaylord-world-creator src/core/regions.ts
+faction,steammesh,스팀메시,Steammesh,"세력 — 제3의 달 메시르와 조응",lqez/vaylord-world-creator src/core/regions.ts
+faction,ember,엠버,Ember,"세력 — 제4의 달 여명월과 조응",lqez/vaylord-world-creator src/core/regions.ts
+province,temperate,온대,Temperate,"기후 대구획 0 — 온대",lqez/vaylord-world-creator src/core/climate.ts
+province,great_plains,대평원,Great Plains,"기후 대구획 1 — 대평원",lqez/vaylord-world-creator src/core/climate.ts
+province,desert,사막,Desert,"기후 대구획 2 — 사막",lqez/vaylord-world-creator src/core/climate.ts
+province,badlands,황무지,Badlands,"기후 대구획 3 — 그랜드캐니언식 건조 암반",lqez/vaylord-world-creator src/core/climate.ts
+province,martian,적토,Martian,"기후 대구획 4 — 녹슨 불모지",lqez/vaylord-world-creator src/core/climate.ts
+lineage,wild,야생,Wild,"혈통 — 어디에나 있는 자연",lqez/vaylord-world-creator src/viewer/propkit.ts
+lineage,arcane,아케인,Arcane,"혈통 — 레이 노드를 따르는 마법",lqez/vaylord-world-creator src/viewer/propkit.ts
+lineage,mesh,메시,Mesh,"혈통 — 기계 폐허(Badlands/Martian 편향)",lqez/vaylord-world-creator src/viewer/propkit.ts
+lineage,bionic,바이오닉,Bionic,"혈통 — 기계-생체 융합",lqez/vaylord-world-creator src/viewer/propkit.ts
+lineage,rift,리프트,Rift,"혈통 — 극단 레이·심연/절벽의 희귀종",lqez/vaylord-world-creator src/viewer/propkit.ts
+lineage,abyss,어비스,Abyss,"혈통 — 한랭 고지 화석 거수",lqez/vaylord-world-creator src/viewer/propkit.ts
+event,awakening,각성,The Awakening,"제4의 달 여명월의 각성 — 역법 앵커 AW 1 (제안, 확정 전)",proposal lqez/vaylord-workspace#53
